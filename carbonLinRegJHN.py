@@ -15,7 +15,8 @@ from sklearn.linear_model import LinearRegression
 co = pd.read_csv("co2_edited_dataset.csv") #creates a pandas using the .csv file 
 df = pd.DataFrame(co) #dataframe of the pandas
 
-print(df.describe())
+print(df[['Annual Increase', 'Uncertainty']].describe())
+
 
 #this code was retrieved from Adarsh Menon on TowardsDataScience.com (https://towardsdatascience.com/linear-regression-in-6-lines-of-python-5e1d0cd05b8d
 X = df.iloc[:, 0].values.reshape(-1, 1) #this gets the first column of the dataframe and sets it to the X axis
